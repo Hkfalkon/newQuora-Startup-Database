@@ -1,1 +1,15 @@
 # newQuora-Startup-Database
+
+The SQL tasks
+In this section are listed 10 questions for you to answer. Write one (single) SQL statement per question. Subqueries and nesting are allowed within a single SQL statement – however, you may be penalized for writing overly complicated SQL statements. DO NOT USE VIEWS (or ‘WITH’ statements/common table expressions) to answer questions.
+1. List all users who have sent a friend-request which is still ‘pending’ (i.e. a friend request has been sent but not confirmed or rejected yet). Your query should return results of the form (userID) (1 mark)
+2. List all the forums that have at least one subscription. Your query should return results of the form (forumId, topic, numSubs). (1 mark)
+3. Find the forum with the most recent post. You may assume there are no ties, i.e. there is only one forum with the most recent post. Your query should return one row of the form (forumId, postId, whenPosted)." (1 mark)
+4. For each user with at least one follower, list the IDs of all their followers. Your query should return results of the form (userId of followed, userId of follower). E.g. If user #1 is followed by users #2 and #3, you’d return two rows: (1,2) and (1,3). (2 marks)
+5. Which forum has the highest number of upvotes on its posts (sum of upvotes of all posts in that forum), and which admin created that forum? Assume there are no ties for first place, and that at least one forum has a post with at least one upvote. Return one row as (adminId, forumId, numberOfUpvotesInForum). (2 marks)
+6. List all the users who have no “followers” (i.e., no other user is “following” them) and no friends. Your query should return results of the form (userId, username). (2 marks)
+7. A “high-quality contributor” is a user who has a mean average of at least one upvote for every post or comment they’ve made, and has made at least one post or comment. Find all of the high- quality contributors and their average upvotes. Return as (userId, avgUpvotes). (2 marks)
+8. Find all comments or posts that have fewer likes than every comment that they are the parentpost of. (I.e. every direct reply/comment to the parent post/comment has more upvotes than the parent). Return as (PostOrCommentId). (3 marks)
+9. List all the ‘general’ users who have only upvoted posts or comments made by an admin OR someone who is currently their friend (i.e. they don’t like any posts of someone who is not an admin and not currently their friend). Users who have liked their own posts should not be returned. Your query should return results of the form (userID). (3 marks)
+10. For each admin, show the forum with the highest number of subscriptions that they have created. If an admin has created multiple forums with an equal highest number of subscriptions, you must return all forums with this tied highest value. Your query should return results of the form (adminID, forumId, numSubscriptions), one row per admin (unless there are ties). If an admin has never created a forum, return (adminId, NULL, 0). (3 marks).
+  
